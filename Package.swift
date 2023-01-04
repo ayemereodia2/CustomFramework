@@ -6,7 +6,12 @@ import PackageDescription
 let package = Package(
     name: "CustomFramework",
     platforms: [
-          .macOS(.v12), .iOS(.v15)
+        .macOS(.v12), .iOS(.v15)
+    ],
+    products: [
+        .library(
+            name: "CustomFramework",
+            targets: ["CustomFramework"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
